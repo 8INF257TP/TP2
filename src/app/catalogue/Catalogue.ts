@@ -1,13 +1,18 @@
-import {Produit} from '../produit/produit'
+import {Produit} from '../produit/Produit'
 
 
 
 export class Catalogue{
-  private produits: Array<[Produit, number]>;
+  public produits: Array<Produit>;
   
-  constructor() {}
+  constructor() {
+    this.produits = new Array<Produit>();
+    this.produits.push(new Produit());
   
-  addProduit(produit: Produit): void{
+  }
+  
+  
+  /*addProduit(produit: Produit): void{
     if (this.produits.indexOf([produit, 1]) !== -1){ // a corrigee
       
     } else {
@@ -22,5 +27,5 @@ export class Catalogue{
     if (temp > -1){ // meme chose que pour addProduit
       this.produits.splice(temp, 1);
     }
-  }
+  }*/
 };

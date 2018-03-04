@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+import { Catalogue } from '../catalogue/Catalogue'
 
 @Component({
   selector: 'app-catalogue',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./catalogue.component.css']
 })
 export class CatalogueComponent implements OnInit {
-
-  constructor() { }
+  catalogue: Catalogue;
+  
+  constructor() {}
 
   ngOnInit() {
+    this.catalogue = new Catalogue();
   }
 
 }

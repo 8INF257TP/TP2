@@ -1,3 +1,19 @@
-<p>
-  produit works!
-</p>
+<div class="col-md-4">
+	<div class="card mb-4 box-shadow">
+	
+		<img class="card-img-top" src={{produit.imageUrl}} alt="Card img cap">
+		<div class="card-body">
+			<p class="card-Text">{{produit.description}}</p> 
+			
+			<div class="d-flex justify-content-between align-items-center">
+				<div class="btn-group">
+					<button class="btn btn-sm btn-outline-secondary" type="button">Ajouter au panier</button>
+					<a routerLink="#"><button class="btn btn-sm btn-outline-secondary" type="button">description d&eacute;taill&eacute;e</button></a>
+					
+				</div>
+				<small class="text-muted">{{produit.price}}</small>
+			</div>
+		</div>
+	</div>
+</div>
+
