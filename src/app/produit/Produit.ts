@@ -5,11 +5,11 @@ export class Produit{
   public description: string;
   public price: number;
   
-  constructor() {
-  this.id = 1;
-    this.name = "name";
-    this.imageUrl = "../../assets/img/img1.jpeg";
-    this.description = "description";
-    this.price = 12;
+  constructor(id: number, name: string, imageUrl: string, description: string, price: number) {
+    this.id = id;
+    this.name = name;
+    this.imageUrl = imageUrl;
+    this.description = description;
+    this.price = price;
   }
 };

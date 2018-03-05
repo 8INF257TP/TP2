@@ -1,16 +1,14 @@
 import {Produit} from '../produit/Produit'
-
-
+import { DonneeProduits } from './DonneeProduits';
 
 export class Catalogue{
   public produits: Array<Produit>;
+  private donnee: DonneeProduits;
   
   constructor() {
     this.produits = new Array<Produit>();
-    this.produits.push(new Produit());
-  
+    this.donnee = new DonneeProduits();
   }
-  
   
   /*addProduit(produit: Produit): void{
     if (this.produits.indexOf([produit, 1]) !== -1){ // a corrigee
