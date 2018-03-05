@@ -5,10 +5,10 @@
       <h1 class="h3 mb-3 font-weight-normal">Ouvrir une session</h1>
       
       <label for="inputUsername" class="sr-only">nom d'utilisateur</label>
-      	<input type="email" id="inputEmail" class="form-control" placeholder="Adresse email" required autofocus>
-      
+      	<input type="email" id="inputEmail" class="form-control" [(ngModel)]="user.username"  name = "username" placeholder="username" required autofocus>
+    
       <label for="inputPassword" class="sr-only">Mot de passe</label>
-      	<input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required>
+      	<input type="password" id="inputPassword" class="form-control" [(ngModel)]="user.password"  name = "password" placeholder="Mot de passe" required>
       
       <div class="checkbox mb-3">
         <label>
@@ -16,5 +16,10 @@
         </label>
       </div>
       
+<<<<<<< HEAD
       <button class="btn btn-lg btn-primary btn-block" type="button" onclick="signin_callback()">Ouvrir une session</button>
+=======
+      <button class="btn btn-lg btn-primary btn-block" type="button" (click)="onClickSignIn(user)">Ouvrir une session</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+>>>>>>> 38bd9b03dcde6e6d866fbcd7374b59efe5d3fcd9
     </form>

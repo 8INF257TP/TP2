@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router'
 import { FormsModule } from '@angular/forms';
 
-
 import { AppComponent } from './app.component';
 import { ProduitComponent } from './produit/produit.component';
 import { PanierComponent } from './panier/panier.component';
@@ -14,12 +13,18 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { HomeComponent } from './home/home.component';
 
+import { FormsModule } from '@angular/forms';
+
 const appRoutes: Routes = [
+<<<<<<< HEAD
   {
     path: '',
     redirectTo: "/home",
     pathMatch: 'full'
   },
+=======
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+>>>>>>> 38bd9b03dcde6e6d866fbcd7374b59efe5d3fcd9
   { path: 'catalogue', component: CatalogueComponent},
   { path: 'sign-up', component: SignUpComponent},
   { path: 'sign-in', component: SignInComponent},
@@ -46,6 +51,7 @@ const appRoutes: Routes = [
     appRoutes,
     { enableTracing: false })
   ],
+  exports: [ RouterModule ],
   providers: [],
   bootstrap: [AppComponent]
 })

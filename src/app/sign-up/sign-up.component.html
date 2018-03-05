@@ -5,30 +5,40 @@
       <h1 class="h3 mb-3 font-weight-normal">Inscription</h1>
       
       <label for="inputLastName" class="sr-only" >nom</label>
+<<<<<<< HEAD
       	<input type="text" id="inputLastName" class="form-control" placeholder="nom" required
       		[(ngModel)]="model.name" name="name">
       	
+=======
+      	<input type="text" id="inputLastName" class="form-control" [(ngModel)]="user.lastName" name = "lastname" placeholder="nom de famille" required>
+                  
+>>>>>>> 38bd9b03dcde6e6d866fbcd7374b59efe5d3fcd9
       <label for="inputFirstName" class="sr-only">pr&eacute;nom</label>
-      	<input type="text" id="inputFirstName" class="form-control" placeholder="pr&eacute;nom" required>
+      	<input type="text" id="inputFirstName" class="form-control" [(ngModel)]="user.firstName" name = "firstname" placeholder="pr&eacute;nom" required>
       	
       <label for="inputUsername" class="sr-only">nom d'utilisateur</label>
-      	<input type="text" id="inputUsername" class="form-control" placeholder="nom d'utilisateur" required>
+      	<input type="text" id="inputUsername" class="form-control" [(ngModel)]="user.username" name = "username" placeholder="nom d'utilisateur" required>
       	
       <label for="inputEmail" class="sr-only">Adresse email</label>
-      	<input type="email" id="inputEmail" class="form-control" placeholder="adresse email" required autofocus>
+      	<input type="email" id="inputEmail" class="form-control" [(ngModel)]="user.email" name = "email" placeholder="adresse email" required autofocus>
       	
       <label for="inputPassword" class="sr-only">mot de passe</label>
-      	<input type="password" id="inputPassword" class="form-control" placeholder="mot de passe" required>
+      	<input type="password" id="inputPassword" class="form-control" [(ngModel)]="user.password" name = "password" placeholder="mot de passe" required>
       	
       <label for="inputAddress" class="sr-only">adresse</label>
-      	<input type="text" id="inputAddress" class="form-control" placeholder="adresse" required>
+      	<input type="text" id="inputAddress" class="form-control" [(ngModel)]="user.address" name = "address" placeholder="adresse" required>
       	
       <label for="inputCity" class="sr-only">ville</label>
-      	<input type="text" id="inputCity" class="form-control" placeholder="ville" required>
+      	<input type="text" id="inputCity" class="form-control" [(ngModel)]="user.city" name = "city" placeholder="ville" required>
       	
       <label for="inputCountry" class="sr-only">pays</label>
-      	<input type="text" id="inputCountry" class="form-control" placeholder="pays" required>
+      	<input type="text" id="inputCountry" class="form-control" [(ngModel)]="user.country" name = "country" placeholder="pays" required>
      
 	
+<<<<<<< HEAD
 	<button class="btn btn-lg btn-primary btn-block" type="submit">S'inscrire</button>
+=======
+	<button class="btn btn-lg btn-primary btn-block" type="button" (click)="onClickSignUp(user)">S'inscrire</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+>>>>>>> 38bd9b03dcde6e6d866fbcd7374b59efe5d3fcd9
     </form>
