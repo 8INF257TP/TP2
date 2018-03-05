@@ -12,19 +12,14 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { HomeComponent } from './home/home.component';
-
-import { FormsModule } from '@angular/forms';
+import { ProduitService } from './produit.service';
 
 const appRoutes: Routes = [
-<<<<<<< HEAD
   {
     path: '',
     redirectTo: "/home",
     pathMatch: 'full'
   },
-=======
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
->>>>>>> 38bd9b03dcde6e6d866fbcd7374b59efe5d3fcd9
   { path: 'catalogue', component: CatalogueComponent},
   { path: 'sign-up', component: SignUpComponent},
   { path: 'sign-in', component: SignInComponent},
@@ -52,7 +47,7 @@ const appRoutes: Routes = [
     { enableTracing: false })
   ],
   exports: [ RouterModule ],
-  providers: [],
+  providers: [ProduitService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

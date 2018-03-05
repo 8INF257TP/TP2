@@ -7,7 +7,7 @@ export class Panier{
   private total: number;
   
   constructor(){
-    
+    this.catalogue = new Catalogue();
   }
   
   /*

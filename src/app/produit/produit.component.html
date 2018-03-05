@@ -7,16 +7,7 @@
 			
 			<div class="d-flex justify-content-between align-items-center">
 				<div class="btn-group">
-
-					<button class="btn btn-sm btn-outline-secondary" type="submit" (click)="AjouterPanier(produit)">
-						Ajouter au panier
-					</button>
-
-					<a routerLink="#">
-						<button class="btn btn-sm btn-outline-secondary" type="button">
-							description d&eacute;taill&eacute;e
-						</button>
-					</a>
+					<button type="button" (click)="produitService.addProduct(produit)">ajouter au panier</button>
 
 				</div>
 				<small class="text-muted">{{produit.price}}</small>

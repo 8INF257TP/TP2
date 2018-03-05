@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Produit } from '../produit/Produit';
+import {ProduitService} from '../produit.service';
 
 @Component({
   selector: 'app-produit',
@@ -11,14 +12,9 @@ export class ProduitComponent implements OnInit {
    @Output() onAjouterPanier = new EventEmitter<Produit>();
    
    
-  constructor() { }
+  constructor(private produitService: ProduitService) { }
 
   ngOnInit() {
   }
 
-  AjouterPanier(produit: Produit){
-  this.onAjouterPanier.emit(produit);
-
-    console.log("AjouterPanier()");
-  }
 }
