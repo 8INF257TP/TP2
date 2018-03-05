@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {RouterModule, Router} from "@angular/router";
+import { User } from '../user/User';
 
 @Component({
   selector: 'app-sign-in',
@@ -6,10 +8,37 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sign-in.component.css']
 })
 export class SignInComponent implements OnInit {
+  router: Router;
 
-  constructor() { }
+  user: User = {
+    firstName: null,
+    lastName: null,
+    username: null,
+    password: null,
+    email: null,
+    address: null,
+    city: null,
+    country: null
+  };
+
+  constructor(private rout: Router) {
+    this.router = rout;
+   }
 
   ngOnInit() {
   }
 
+  onClickSignIn(user:User) {
+
+    if (localStorage.getItem("username") == user.username &&
+        localStorage.getItem("password") == user.password) 
+    {
+          alert("Signin successful!");
+          this.router.navigate(['catalogue']);
+    }
+    else
+    {
+      alert("Wrong username/password pair");
+    }    
+  }
 }
