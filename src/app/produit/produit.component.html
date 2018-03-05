@@ -37,7 +37,7 @@
 					<p>{{produit.price}}</p>
 				</div>
 				<div class="panel-body">
-					<button class="btn btn-primary" type="button" (click)="produitService.addProduct(produit)"></button>
+					<button class="btn btn-primary" type="button" (click)="produitService.addProduct({produit: produit, quantite: 1})"></button>
 				</div>
 			</div>
 		</div>
