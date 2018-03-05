@@ -1,29 +1,31 @@
 import {Produit} from '../produit/Produit'
+import { DonneeProduits } from './DonneeProduits';
+
+export interface IQteProduit {
+  produit: Produit;
+  quantite: number;
+}
 
 export class Catalogue{
-  public produits: Array<Produit>;
+  
+  public produits: IQteProduit[]; // la liste contient le produit ainsi que le nombre de ce produit dans le catalogue
+  private donnee: DonneeProduits;
   
   constructor() {
-    this.produits = new Array<Produit>();
-    this.produits.push(new Produit());
-  
-  }
-  
-  
-  /*addProduit(produit: Produit): void{
-    if (this.produits.indexOf([produit, 1]) !== -1){ // a corrigee
-      
-    } else {
-      this.produits.push([produit, 1]);
+    this.donnee = new DonneeProduits();
+    this.produits = [];
+    let prodTemp: Produit[] = this.donnee.genererProduits(10);
+    
+    for (let produit of prodTemp) {
+      this.produits.push({produit: produit, quantite: 1});
     }
   }
-  
-  removeProduit(produit: Produit): void{
+
+  private findProduit(element: {Produit, number}): boolean {
+    let produit: Produit = element[0];
     
-    const temp = this.produits.indexOf([produit, 1]);
     
-    if (temp > -1){ // meme chose que pour addProduit
-      this.produits.splice(temp, 1);
-    }
-  }*/
+    
+    return false;
+  }
 };
