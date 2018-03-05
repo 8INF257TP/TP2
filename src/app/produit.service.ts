@@ -10,10 +10,21 @@ export class ProduitService {
 
   constructor() { }
 
-  addProduct(produit: IQteProduit){
-    this.produits.push(produit);
+  addProduct(element: IQteProduit) : void{
+    
+    let index: number = 0;
+    
+    for(let produit of this.produits){
+      if(element.produit.id == produit.produit.id){
+        this.produits[index].quantite += element.quantite;
+        return;
+      }
+      index++;
+    }
 
-    console.log("test")
+    this.produits.push(element);
+
+    console.log("test");
   }
 
   getProduct(){

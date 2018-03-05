@@ -27,12 +27,23 @@
 					<p>Lorem Ipsum</p>
 				</div>
 				<div class="panel-body">
+						
 					<p>Lorem Ipsum</p>
 				</div>
 			</div>
 		</div>
 		<div class="col-sm-2" style="background-color:red">
+			
 			<p>Lorem Ipsum</p>
+
+			<div class="btn-group">
+					<button type="button" 
+					 class="btn btn-sm btn-outline-secondary" 
+					 (click)="produitService.addProduct({produit: produit, quantite: 1})">
+					 ajouter au panier
+					</button>
+
+				</div>
 		</div>
 	</div>
 </div>"

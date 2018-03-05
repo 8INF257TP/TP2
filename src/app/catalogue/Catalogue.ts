@@ -21,11 +21,15 @@ export class Catalogue{
     }
   }
 
-  private findProduit(element: {Produit, number}): boolean {
-    let produit: Produit = element[0];
-    
-    
-    
-    return false;
+  ajouterProduit(element: IQteProduit): void{
+    let index: number = 0;
+    for(let produit of this.produits){
+      if(element.produit.id == produit.produit.id){
+        this.produits[index].quantite += element.quantite;
+        return;
+      }
+      index++;
+    }
+    this.produits.push(element);
   }
 };
