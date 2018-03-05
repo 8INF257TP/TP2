@@ -2,28 +2,18 @@ import {Produit} from '../produit/Produit'
 import { DonneeProduits } from './DonneeProduits';
 
 export class Catalogue{
-  public produits: Array<Produit>;
+  public produits: [{Produit, number}]; // la liste contient le produit ainsi que le nombre de ce produit dans le catalogue
   private donnee: DonneeProduits;
   
   constructor() {
-    this.produits = new Array<Produit>();
     this.donnee = new DonneeProduits();
   }
-  
-  /*addProduit(produit: Produit): void{
-    if (this.produits.indexOf([produit, 1]) !== -1){ // a corrigee
-      
-    } else {
-      this.produits.push([produit, 1]);
-    }
+
+  private findProduit(element: {Produit, number}): boolean {
+    let produit: Produit = element[0];
+    
+    
+    
+    return false;
   }
-  
-  removeProduit(produit: Produit): void{
-    
-    const temp = this.produits.indexOf([produit, 1]);
-    
-    if (temp > -1){ // meme chose que pour addProduit
-      this.produits.splice(temp, 1);
-    }
-  }*/
 };

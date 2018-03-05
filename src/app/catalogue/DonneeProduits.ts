@@ -27,7 +27,7 @@ export class DonneeProduits {
                                   'Sortaient or fusillade pu la suffisait arrachait indicible bourreaux.',
                                   'Pompons minutes etalent or le un de retarde.'];
   
-  imageUrl = '/src/assets/imag';
+  imageUrl = '/src/assets/img';
   
   
   constructor() {
@@ -37,8 +37,18 @@ export class DonneeProduits {
   genererProduit(): Produit {
     let nom: string = this.nomProduit[Math.floor(Math.random() * (this.nomProduit.length))];
     let description: string = this.descriptionProduit[Math.floor(Math.random() * (this.descriptionProduit.length))];
-    let imageUrl: string = this.imageUrl +Math.floor(Math.random() * 9 + 1) + '.jpeg';
+    let imageUrl: string = this.imageUrl + Math.floor(Math.random() * 9 + 1) + '.jpeg';
     this.nombreProduitGenere++;
     return new Produit(this.nombreProduitGenere, nom, imageUrl, description, (Math.random() * 1000));
+  }
+  
+  genererProduits(nombreProduit: number): Produit[] {
+    let produits: Produit[];
+    
+    for (let i = 0; i < nombreProduit; ++i) {
+      produits.push(this.genererProduit());
+    }
+    
+    return produits;
   }
 }
