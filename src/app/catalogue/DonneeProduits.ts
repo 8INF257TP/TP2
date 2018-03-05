@@ -27,7 +27,7 @@ export class DonneeProduits {
                                   'Sortaient or fusillade pu la suffisait arrachait indicible bourreaux.',
                                   'Pompons minutes etalent or le un de retarde.'];
   
-  imageUrl = '/src/assets/img';
+  imageUrl = '../../assets/img/img';
   
   
   constructor() {
@@ -43,9 +43,10 @@ export class DonneeProduits {
   }
   
   genererProduits(nombreProduit: number): Produit[] {
-    let produits: Produit[];
+    let produits: Produit[] = [];
     
     for (let i = 0; i < nombreProduit; ++i) {
+      
       produits.push(this.genererProduit());
     }
     
