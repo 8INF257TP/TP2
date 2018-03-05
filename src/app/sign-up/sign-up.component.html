@@ -5,7 +5,8 @@
       <h1 class="h3 mb-3 font-weight-normal">Inscription</h1>
       
       <label for="inputLastName" class="sr-only" >nom</label>
-      	<input type="text" id="inputLastName" class="form-control" placeholder="nom" required>
+      	<input type="text" id="inputLastName" class="form-control" placeholder="nom" required
+      		[(ngModel)]="model.name" name="name">
       	
       <label for="inputFirstName" class="sr-only">pr&eacute;nom</label>
       	<input type="text" id="inputFirstName" class="form-control" placeholder="pr&eacute;nom" required>
@@ -29,6 +30,5 @@
       	<input type="text" id="inputCountry" class="form-control" placeholder="pays" required>
      
 	
-	<button class="btn btn-lg btn-primary btn-block" type="button">S'inscrire</button>
-      <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+	<button class="btn btn-lg btn-primary btn-block" type="submit">S'inscrire</button>
     </form>

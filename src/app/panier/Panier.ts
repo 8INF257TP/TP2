@@ -1,13 +1,16 @@
-/*
-import {Catalogue} from '../catalogue/catalogue';
-import {Produit} from '../produit/produit';
+
+import {Catalogue} from '../catalogue/Catalogue';
+import {Produit} from '../produit/Produit';
 
 export class Panier{
-  public catalogue: Catalogue;
+ public catalogue: Catalogue;
   private total: number;
   
-  constructor(){}
+  constructor(){
+    
+  }
   
+  /*
   addProduit(produit: Produit) {
     this.catalogue.addProduit(produit);
     this.total += produit.price;
@@ -21,5 +24,5 @@ export class Panier{
   getTotal(): number {
     return this.total;
   }
+  */
 }
-*/

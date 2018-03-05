@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router'
+import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -14,10 +15,16 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
+  {
+    path: '',
+    redirectTo: "/home",
+    pathMatch: 'full'
+  },
   { path: 'catalogue', component: CatalogueComponent},
   { path: 'sign-up', component: SignUpComponent},
   { path: 'sign-in', component: SignInComponent},
   { path: 'home', component: HomeComponent},
+  { path: 'panier', component: PanierComponent},
 ];
 
 @NgModule({
@@ -34,6 +41,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(
     appRoutes,
     { enableTracing: false })

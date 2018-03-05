@@ -1,7 +1,5 @@
 import {Produit} from '../produit/Produit'
 
-
-
 export class Catalogue{
   public produits: Array<Produit>;
   
