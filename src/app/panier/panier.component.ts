@@ -18,14 +18,7 @@ produit: Produit;
 
 
   ngOnInit() {
-    console.log("ngOnInit()");
     this.panier.catalogue.produits = this.produitService.getProduct();
+    this.panier.total = this.produitService.getTotal();
   }
-
-  ajouterProduit(produit: IQteProduit) : void{
-    this.panier.catalogue.produits.push(produit);
-
-    console.log("le produit a ete ajoute au panier");
-  }
-
 }

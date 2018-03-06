@@ -1,38 +1,27 @@
-<!-- <div class="col-lg-12">
-	<div class="card lg-4 box-shadow">
-	
-		<img class="card-img-top" src={{produit.imageUrl}}>
-		{{produit.description}}
-		<div class="card-body">
-			<div class="d-flex justify-content-between align-items-center">
-				<div class="btn-group">
-					<button type="button" (click)="produitService.addProduct(produit)">ajouter au panier</button>
-
+<div class="container">
+	<div class="row">
+		<div class="col-sm-3">
+			<img src={{produit.imageUrl}}>
+		</div>
+		<div class="col-sm-7">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h1>{{produit.name}}</h1>
 				</div>
-				<small class="text-muted">{{produit.price}}</small>
+				<div class="panel-body">
+					<h2>{{produit.description}}</h2>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-2">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<p>{{produit.price.toFixed(2)}}$</p>
+				</div>
+				<div class="panel-body">
+					<button class="btn btn-primary" type="button" (click)="produitService.addProduct({produit: produit, quantite: 1})"></button>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
--->
-
-<div class="container">
-	<div class="row">
-		<div class="col-sm-3" style="background-color:yellow">
-			<img src={{produit.imageUrl}}>
-		</div>
-		<div class="col-sm-7" style="background-color:green">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<p>Lorem Ipsum</p>
-				</div>
-				<div class="panel-body">
-					<p>Lorem Ipsum</p>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-2" style="background-color:red">
-			<p>Lorem Ipsum</p>
-		</div>
-	</div>
-</div>"
