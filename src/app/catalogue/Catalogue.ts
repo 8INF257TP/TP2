@@ -14,7 +14,7 @@ export class Catalogue{
   constructor() {
     this.donnee = new DonneeProduits();
     this.produits = [];
-    let prodTemp: Produit[] = this.donnee.genererProduits(10);
+    let prodTemp: Produit[] = this.donnee.genererProduits(153);
     
     for (let produit of prodTemp) {
       this.produits.push({produit: produit, quantite: 1});
