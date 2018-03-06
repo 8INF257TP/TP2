@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router'
 import {NgxPaginationModule} from 'ngx-pagination';
 import { FormsModule } from '@angular/forms';
-import { NgxPaginationModule} from 'ngx-pagination';
 
 import { AppComponent } from './app.component';
 import { ProduitComponent } from './produit/produit.component';
