@@ -20,7 +20,7 @@ export class NavbarComponent implements OnInit {
         var a1 = document.getElementById('a1');
         a1.innerHTML = 'Panier';
         a1.setAttribute('routerLink', 'panier');
-        a1.setAttribute('href', 'sign-in');
+        a1.setAttribute('href', 'panier');
         
         var a2 = document.getElementById('a2');
         a2.innerHTML = 'Deconnection';

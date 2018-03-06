@@ -14,6 +14,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { HomeComponent } from './home/home.component';
 import { ProduitService } from './produit.service';
+import { ProduitDetailComponent } from './produit-detail/produit-detail.component';
 
 const appRoutes: Routes = [
   {
@@ -25,7 +26,9 @@ const appRoutes: Routes = [
   { path: 'sign-up', component: SignUpComponent},
   { path: 'sign-in', component: SignInComponent},
   { path: 'home', component: HomeComponent},
-  { path: 'panier', component: PanierComponent}
+  { path: 'panier', component: PanierComponent},
+  { path: 'produit-detail', component: ProduitDetailComponent}
+  
 ];
 
 @NgModule({
@@ -38,7 +41,8 @@ const appRoutes: Routes = [
     NavbarComponent,
     SignUpComponent,
     SignInComponent,
-    HomeComponent
+    HomeComponent,
+    ProduitDetailComponent
   ],
   imports: [
     BrowserModule,

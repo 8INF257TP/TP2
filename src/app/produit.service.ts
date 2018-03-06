@@ -8,9 +8,14 @@ import { IQteProduit } from './catalogue/Catalogue'
 export class ProduitService {
   produits: IQteProduit[] = [];
   total: number = 0;
+  produitSelectionne: Produit;
 
   constructor() { }
 
+  onSelectProduit(produit: Produit) : void {
+    this.produitSelectionne = produit;
+  }
+  
   addProduct(element: IQteProduit) : void{
 
     console.log("produit ajoute au panier");
