@@ -18,32 +18,28 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-sm-3" style="background-color:yellow">
+		<div class="col-sm-3">
 			<img src={{produit.imageUrl}}>
 		</div>
-		<div class="col-sm-7" style="background-color:green">
+		<div class="col-sm-7">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<p>Lorem Ipsum</p>
+					<h1>{{produit.name}}</h1>
 				</div>
 				<div class="panel-body">
-						
-					<p>Lorem Ipsum</p>
+					<h2>{{produit.description}}</h2>
 				</div>
 			</div>
 		</div>
 		<div class="col-sm-2" style="background-color:red">
-			
-			<p>Lorem Ipsum</p>
-
-			<div class="btn-group">
-					<button type="button" 
-					 class="btn btn-sm btn-outline-secondary" 
-					 (click)="produitService.addProduct({produit: produit, quantite: 1})">
-					 ajouter au panier
-					</button>
-
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<p>{{produit.price}}</p>
 				</div>
+				<div class="panel-body">
+					<button class="btn btn-primary" type="button" (click)="produitService.addProduct({produit: produit, quantite: 1})"></button>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>"
