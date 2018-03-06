@@ -4,7 +4,7 @@ import {Produit} from '../produit/Produit';
 
 export class Panier{
  public catalogue: Catalogue;
-  private total: number;
+ public total: number;
   
   constructor(){
     this.catalogue = new Catalogue();
