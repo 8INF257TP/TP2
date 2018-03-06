@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router'
+import {NgxPaginationModule} from 'ngx-pagination';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -44,7 +45,8 @@ const appRoutes: Routes = [
     FormsModule,
     RouterModule.forRoot(
     appRoutes,
-    { enableTracing: false })
+    { enableTracing: false }),
+    NgxPaginationModule
   ],
   exports: [ RouterModule ],
   providers: [ProduitService],
