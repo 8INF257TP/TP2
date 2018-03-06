@@ -33,8 +33,11 @@ export class SignInComponent implements OnInit {
     if (localStorage.getItem("username") == user.username &&
         localStorage.getItem("password") == user.password) 
     {
+
+          localStorage.setItem('connectedUser', 'yes');
           alert("Signin successful!");
           this.router.navigate(['catalogue']);
+          window.location.reload(true);         // Hack needed to display the proper items on the navbar
     }
     else
     {

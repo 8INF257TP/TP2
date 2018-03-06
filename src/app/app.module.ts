@@ -24,7 +24,7 @@ const appRoutes: Routes = [
   { path: 'sign-up', component: SignUpComponent},
   { path: 'sign-in', component: SignInComponent},
   { path: 'home', component: HomeComponent},
-  { path: 'panier', component: PanierComponent},
+  { path: 'panier', component: PanierComponent}
 ];
 
 @NgModule({
