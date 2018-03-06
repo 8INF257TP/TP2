@@ -34,7 +34,7 @@
 		<div class="col-sm-2" style="background-color:red">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<p>{{produit.price}}</p>
+					<p>{{produit.price.toFixed(2)}}$</p>
 				</div>
 				<div class="panel-body">
 					<button class="btn btn-primary" type="button" (click)="produitService.addProduct({produit: produit, quantite: 1})"></button>
