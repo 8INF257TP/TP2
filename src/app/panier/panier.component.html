@@ -1,18 +1,14 @@
 <main role="main">
-
-  <div class="container">
-    <h2>Total des achats: {{panier.total.toFixed(2)}}$</h2>
+  <div>
+    <p>Total des achats: {{panier.total.toFixed(2)}$}</p>
     <button class="btn btn-lg btn-primary" routerLink="/" type="submit">Payer le panier</button>
   </div>
 
-	<div class="album py-5 bg-light">
-		<div class="container">
-			<div class="row" id="product-catalogue" *ngFor="let produit of panier.catalogue.produits">
+	<ul class="list-group">
+		<li class="list-group-item" id="product-catalogue" *ngFor="let produit of panier.catalogue.produits">
         <app-produit [produit]="produit.produit">{{produit}}</app-produit>
         {{produit.quantite}}
-			</div>
-		</div>
-  </div>
+	</ul>
 </main>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

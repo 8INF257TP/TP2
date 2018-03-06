@@ -10,6 +10,10 @@ export class Produit{
     this.name = name;
     this.imageUrl = imageUrl;
     this.description = description;
+<<<<<<< HEAD
     this.price = price;
+=======
+    this.price = price.toFixed(2) + '$';
+>>>>>>> 7ad7df28438853b51d3fac76623404a830e7b0a1
   }
 };
