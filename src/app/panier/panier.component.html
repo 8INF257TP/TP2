@@ -1,7 +1,7 @@
 <main role="main">
-  <div>
-    <p>Total des achats: {{panier.total.toFixed(2)}}$</p>
-    <button class="btn btn-lg btn-primary" routerLink="/" type="submit">Payer le panier</button>
+  <div style="margin-top: 32px">
+    <h2>Total des achats: {{panier.total.toFixed(2)}}$</h2>
+    <button class="btn btn-lg btn-primary" routerLink="/" (click)="payerPanier()" type="button">Payer le panier</button>
   </div>
 
 	<ul class="list-group">

@@ -21,4 +21,11 @@ produit: Produit;
     this.panier.catalogue.produits = this.produitService.getProduct();
     this.panier.total = this.produitService.getTotal();
   }
+
+  payerPanier(){
+    this.produitService.clearTotal();
+    this.produitService.clearProduits();
+
+    
+  }
 }

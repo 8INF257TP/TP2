@@ -38,4 +38,14 @@ export class ProduitService {
   getTotal(){
     return this.total;
   }
+
+  clearProduits(){
+    while (this.produits.length > 0){
+      this.produits.pop();
+    }
+  }
+
+  clearTotal(){
+    this.total = 0;
+  }
 }
