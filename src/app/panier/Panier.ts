@@ -1,13 +1,14 @@
 
-import {Catalogue} from '../catalogue/Catalogue';
+import {IQteProduit} from '../catalogue/Catalogue';
 import {Produit} from '../produit/Produit';
 
 export class Panier{
- public catalogue: Catalogue;
+ public produits: IQteProduit[];
  public total: number;
   
   constructor(){
-    this.catalogue = new Catalogue();
+    this.produits = [];
+    this.total = 0;
   }
   
   /*

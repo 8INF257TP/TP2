@@ -1,7 +1,7 @@
 import { Component, OnInit, OnChanges, Input } from '@angular/core';
-import { Panier } from './Panier'
-import { Produit} from '../produit/Produit'
-import { ProduitService } from '../produit.service'
+import { Panier } from './Panier';
+import { Produit} from '../produit/Produit';
+import { UserService } from '../user.service';
 import { IQteProduit } from '../catalogue/Catalogue';
 
 @Component({
@@ -14,18 +14,16 @@ export class PanierComponent implements OnInit {
 public panier: Panier = new Panier();
 produit: Produit;
 
-  constructor(private produitService: ProduitService) { }
+  constructor(private userService: UserService) { }
 
 
   ngOnInit() {
-    this.panier.catalogue.produits = this.produitService.getProduct();
-    this.panier.total = this.produitService.getTotal();
+    this.panier.produits = this.userService.getCurrentUserPanier();
+    this.panier.total = this.userService.getCurrentUserTotal();
   }
 
   payerPanier(){
-    this.produitService.clearTotal();
-    this.produitService.clearProduits();
-
-    
+    /*this.produitService.clearTotal();
+    this.produitService.clearProduits();*/
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {RouterModule, Router} from "@angular/router";
+import { UserService } from '../user.service';
 import { User } from '../user/User';
 
 @Component({
@@ -8,7 +9,6 @@ import { User } from '../user/User';
   styleUrls: ['./sign-in.component.css']
 })
 export class SignInComponent implements OnInit {
-  router: Router;
 
   user: User = {
     firstName: null,
@@ -18,30 +18,16 @@ export class SignInComponent implements OnInit {
     email: null,
     address: null,
     city: null,
-    country: null
+    country: null,
+    panier: null
   };
 
-  constructor(private rout: Router) {
-    this.router = rout;
-   }
+  constructor(private rout: Router, private userService: UserService) { }
 
   ngOnInit() {
   }
 
   onClickSignIn(user:User) {
-
-    if (localStorage.getItem("username") == user.username &&
-        localStorage.getItem("password") == user.password) 
-    {
-
-          localStorage.setItem('connectedUser', 'yes');
-          alert("Signin successful!");
-          this.router.navigate(['catalogue']);
-          window.location.reload(true);         // Hack needed to display the proper items on the navbar
-    }
-    else
-    {
-      alert("Wrong username/password pair");
-    }    
+    this.userService.connect(user.username, user.password);
   }
 }

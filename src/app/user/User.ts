@@ -1,3 +1,5 @@
+import {Panier} from '../panier/Panier';
+
 export class User{
   public firstName: string;
   public lastName: string;
@@ -7,7 +9,9 @@ export class User{
   public address: string;
   public city: string;
   public country: string;
+  public panier: Panier;
   
   constructor(){
+    this.panier = new Panier();
   }
 };

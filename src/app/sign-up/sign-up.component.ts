@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {RouterModule, Router} from "@angular/router";
+import { UserService } from '../user.service';
 import { User } from '../user/User';
+import { Panier } from '../panier/Panier';
 
 @Component({
   selector: 'app-sign-up',
@@ -8,7 +10,6 @@ import { User } from '../user/User';
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent implements OnInit {
-  router: Router;
 
   user: User = {
     firstName: null,
@@ -18,29 +19,20 @@ export class SignUpComponent implements OnInit {
     email: null,
     address: null,
     city: null,
-    country: null
+    country: null,
+    panier: new Panier()
   };
   
-  constructor(private rout: Router) {
-    this.router = rout;
-   }
+  constructor(private rout: Router, private userService: UserService) { }
 
   ngOnInit() {
   }
 
   onClickSignUp(user: User) {
-  
-    localStorage.setItem("lastname", user.lastName);
-    localStorage.setItem("firstname", user.firstName);
-    localStorage.setItem("username", user.username);
-    localStorage.setItem("password", user.password);
-    localStorage.setItem("email", user.email);
-    localStorage.setItem("address", user.address);
-    localStorage.setItem("city", user.city);
-    localStorage.setItem("country", user.country);
-
+    
+    this.userService.newUser(user);
     alert("Sign-up successful");
 
-    this.router.navigate(['home']);
+    this.rout.navigateByUrl('home');
   }
 }

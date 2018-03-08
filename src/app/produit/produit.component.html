@@ -18,9 +18,18 @@
 				<div class="panel-heading">
 					<p>{{produit.price.toFixed(2)}}$</p>
 				</div>
-				<div class="panel-body">
-					<button class="btn btn-primary" type="button" (click)="produitService.addProduct({produit: produit, quantite: 1})"></button>
+				<div class="panel-body" id="ajouter" *ngIf="add; else retirerProduit">
+					<button class="btn btn-primary" type="button" (click)="userService.addProduct({produit: produit, quantite: 1})">
+					</button>
 				</div>
+
+				<ng-template #retirerProduit>
+					<div class="panel-body" id="retirer">
+						<button class="btn btn-primary" type="button" (click)="userService.removeProduct({produit: produit, quantite: 1})">
+						</button>
+					</div>
+				</ng-template>
+
 			</div>
 		</div>
 	</div>

@@ -1,19 +1,32 @@
 <header>
 	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
 		<nav class="container d-flex justify-content-between navbar-inverse">
-			<a class="navbar-brand" routerLink='home'>Catalogue en ligne</a>
+			<a class="navbar-brand" routerLink='catalogue'>Catalogue en ligne</a>
 			
-			<ul class="nav navbar-nav navbar-right" id="unique_navbar">
+			<div *ngIf="userService.connected; else notConnected">
+				<ul class="nav navbar-nav navbar-right" id="unique_navbar">	
+					<li class="nav-item active">
+						<a class="nav-link" routerLink='panier'>Voir le panier</a>
+					</li>
+								
+					<li class="nav-item active">
+						<a class="nav-link" routerLink='home' (click)='userService.disconnect()'>D&eacute;connexion</a>
+					</li>
+				</ul>
+			</div>
 
-				<li class="nav-item active">
-					<a class="nav-link" id = "a1"></a>
-				</li>
-				
-				<li class="nav-item active">
-					<a class="nav-link" id = "a2"></a>
-				</li>
+			<ng-template #notConnected>
+				<ul class="nav navbar-nav navbar-right" id="unique_navbar">	
+					<li class="nav-item active">
+						<a class="nav-link" routerLink='sign-in'>Sign in</a>
+					</li>
+							
+					<li class="nav-item active">
+						<a class="nav-link" routerLink='sign-up'>Sign up</a>
+					</li>
+				</ul>				
+			</ng-template>
 
-			</ul>
 		</nav>
 	</nav>
 </header>
