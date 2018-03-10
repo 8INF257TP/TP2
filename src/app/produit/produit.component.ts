@@ -1,7 +1,11 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { Produit } from '../produit/Produit';
+<<<<<<< HEAD
 import { UserService } from '../user.service';
+=======
+import { ProduitService } from '../produit.service';
+>>>>>>> f0279e592a46b1a85427277efc8b1aabb27aad7b
 
 @Component({
   selector: 'app-produit',
@@ -12,7 +16,13 @@ export class ProduitComponent implements OnInit {
    @Input() produit: Produit;
    add: boolean;
    
+<<<<<<< HEAD
   constructor(private userService: UserService, private router: Router){ }
+=======
+   produitSelectionne: Produit;
+   
+  constructor(private produitService: ProduitService) { }
+>>>>>>> f0279e592a46b1a85427277efc8b1aabb27aad7b
 
   ngOnInit() {
     if(this.router.url == '/catalogue'){
@@ -23,4 +33,7 @@ export class ProduitComponent implements OnInit {
     }
   }
 
+  selectionProduit(produit: Produit) {
+    this.produitSelectionne = produit;
+  }
 }
