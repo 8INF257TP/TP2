@@ -49,7 +49,6 @@ constructor(private router: Router, private produitService: ProduitService) { }
   disconnect(){
     this.connected = false;
     this.currentUser = null;
-    this.produitService.clearProduits();
   }
 
   newUser(user: User){
@@ -100,5 +99,15 @@ constructor(private router: Router, private produitService: ProduitService) { }
 
   getCurrentUserTotal(){
     return this.currentUser.panier.total;
+  }
+
+  clearProduits(){
+    while (this.currentUser.panier.produits.length > 0){
+      this.currentUser.panier.produits.pop();
+    }
+  }
+
+  clearTotal(){
+    this.currentUser.panier.total = 0;
   }
 }

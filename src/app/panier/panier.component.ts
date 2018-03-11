@@ -23,7 +23,7 @@ produit: Produit;
   }
 
   payerPanier(){
-    /*this.produitService.clearTotal();
-    this.produitService.clearProduits();*/
+    this.userService.clearTotal();
+    this.userService.clearProduits();
   }
 }
