@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { ProduitComponent } from './produit/produit.component';
 import { PanierComponent } from './panier/panier.component';
 import { CatalogueComponent } from './catalogue/catalogue.component';
-import { UserComponent } from './user/user.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { SignInComponent } from './sign-in/sign-in.component';
@@ -38,7 +37,6 @@ const appRoutes: Routes = [
     ProduitComponent,
     PanierComponent,
     CatalogueComponent,
-    UserComponent,
     NavbarComponent,
     SignUpComponent,
     SignInComponent,

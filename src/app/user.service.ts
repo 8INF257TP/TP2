@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { User } from './user/User';
+import { User } from './User';
 import { Router, RouterModule } from '@angular/router';
 import {ProduitService} from './produit.service';
 import { Produit } from './produit/Produit';
