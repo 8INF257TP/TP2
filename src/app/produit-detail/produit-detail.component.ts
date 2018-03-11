@@ -1,4 +1,5 @@
 import { ProduitService } from '../produit.service';
+import { UserService } from '../user.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { Produit } from '../produit/Produit';
 
@@ -10,7 +11,7 @@ import { Produit } from '../produit/Produit';
 export class ProduitDetailComponent implements OnInit {
   produit: Produit;
   
-  constructor(private produitService: ProduitService) { }
+  constructor(private userService: UserService,  private produitService: ProduitService) { }
 
   ngOnInit() {
     this.produit = this.produitService.produitSelectionne;
