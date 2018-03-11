@@ -16,26 +16,6 @@ export class ProduitService {
     this.produitSelectionne = produit;
   }
   
-  addProduct(element: IQteProduit) : void{
-
-    console.log("produit ajoute au panier");
-    
-    let index: number = 0;
-    
-    for(let produit of this.produits){
-      if(element.produit.id == produit.produit.id){
-        this.produits[index].quantite += element.quantite;
-        this.total += element.produit.price;
-        return;
-      }
-      index++;
-    }
-
-    this.produits.push(element);
-    this.total += element.produit.price;
-
-  }
-
   getProduct(){
     return this.produits;
   }

@@ -36,7 +36,8 @@ constructor(private router: Router, private produitService: ProduitService) { }
     for(this.currentUser of this.users){
       if(username == this.currentUser.username && password == this.currentUser.password){
         this.connected = true;
-
+        //la ligne qui suit fait en sorte que le total tombe a 0.00 au lieu de -0.00
+        this.currentUser.panier.total = 0.003;                          
         alert("sign in successful");
         this.router.navigateByUrl('catalogue');
         return;
@@ -74,18 +75,19 @@ constructor(private router: Router, private produitService: ProduitService) { }
   }
 
   removeProduct(element: IQteProduit){
-    console.log("removed");
+    //console.log("removed");
     let index: number = 0;
       
     for(let produit of this.currentUser.panier.produits){
-      if(element.produit.id == produit.produit.id){
-        
-        if(produit.quantite == 1){
+      if(element.produit.id == produit.produit.id){    
+        if(produit.quantite == 1)
+        {
           this.currentUser.panier.produits.splice(index, 1);
-          return;
         }
-
-        this.currentUser.panier.produits[index].quantite -= element.quantite;
+        else 
+        {
+          this.currentUser.panier.produits[index].quantite -= element.quantite;
+        }
         this.currentUser.panier.total -= element.produit.price;
         return;
       }
