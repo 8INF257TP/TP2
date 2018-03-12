@@ -1,4 +1,4 @@
-import { Produit } from '../produit/Produit'
+import { Produit } from './Produit'
 import { DonneeProduits } from './DonneeProduits';
 
 export interface IQteProduit {

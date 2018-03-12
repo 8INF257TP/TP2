@@ -1,4 +1,4 @@
-import {Panier} from './panier/Panier';
+import {Panier} from './Panier';
 
 export class User{
   public firstName: string;

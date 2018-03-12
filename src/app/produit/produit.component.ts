@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
-import { Produit } from '../produit/Produit';
+import { Produit } from '../Produit';
 import { UserService } from '../user.service';
 import { ProduitService } from '../produit.service';
 
@@ -12,11 +12,21 @@ import { ProduitService } from '../produit.service';
 export class ProduitComponent implements OnInit { 
    @Input() produit: Produit;
    add: boolean;
+   cart: boolean;
    
-  constructor(private userService: UserService, private router: Router, private produitService: ProduitService){ }
+  constructor(private userService: UserService, private router: Router, private produitService: ProduitService){ 
+    
+  }
    produitSelectionne: Produit;
 
   ngOnInit() {
+    if (this.router.url == '/admin') {
+      this.cart = false;
+    }
+    else {
+      this.cart = true;
+    }
+
     if(this.router.url == '/catalogue'){
       this.add = true;
     }

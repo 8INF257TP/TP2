@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import {RouterModule, Router} from "@angular/router";
 import { UserService } from '../user.service';
 import { User } from '../User';
-import { Panier } from '../panier/Panier';
+import { Panier } from '../Panier';
 
 @Component({
   selector: 'app-sign-up',

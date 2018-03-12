@@ -1,8 +1,8 @@
 import { Component, OnInit, OnChanges, Input } from '@angular/core';
-import { Panier } from './Panier';
-import { Produit} from '../produit/Produit';
+import { Panier } from '../Panier';
+import { Produit} from '../Produit';
 import { UserService } from '../user.service';
-import { IQteProduit } from '../catalogue/Catalogue';
+import { IQteProduit } from '../Catalogue';
 
 @Component({
   selector: 'app-panier',

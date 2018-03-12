@@ -15,6 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { ProduitService } from './produit.service';
 import { UserService } from './user.service';
 import { ProduitDetailComponent } from './produit-detail/produit-detail.component';
+import { AdminComponent } from './admin/admin.component';
 
 const appRoutes: Routes = [
   {
@@ -27,8 +28,8 @@ const appRoutes: Routes = [
   { path: 'sign-in', component: SignInComponent},
   { path: 'home', component: HomeComponent},
   { path: 'panier', component: PanierComponent},
-  { path: 'produit-detail', component: ProduitDetailComponent}
-  
+  { path: 'produit-detail', component: ProduitDetailComponent},
+  { path: 'admin', component: AdminComponent }
 ];
 
 @NgModule({
@@ -41,7 +42,8 @@ const appRoutes: Routes = [
     SignUpComponent,
     SignInComponent,
     HomeComponent,
-    ProduitDetailComponent
+    ProduitDetailComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

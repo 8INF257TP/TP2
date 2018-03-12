@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { User } from './User';
 import { Router, RouterModule } from '@angular/router';
 import {ProduitService} from './produit.service';
-import { Produit } from './produit/Produit';
-import { IQteProduit } from './catalogue/Catalogue';
-import {Panier} from './panier/Panier';
+import { Produit } from './Produit';
+import { IQteProduit } from './Catalogue';
+import {Panier} from './Panier';
 
 @Injectable()
 export class UserService {
@@ -58,6 +58,11 @@ constructor(private router: Router, private produitService: ProduitService) { }
 
   addProduct(element: IQteProduit) : void{
 
+    if (this.connected == false) {
+      this.router.navigateByUrl('sign-in');
+      return;
+    }
+
     console.log("produit ajoute au panier");
     
     let index: number = 0;
@@ -75,7 +80,7 @@ constructor(private router: Router, private produitService: ProduitService) { }
   }
 
   removeProduct(element: IQteProduit){
-    //console.log("removed");
+    console.log("removed");
     let index: number = 0;
       
     for(let produit of this.currentUser.panier.produits){

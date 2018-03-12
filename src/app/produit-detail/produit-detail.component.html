@@ -1,13 +1,13 @@
 <div class="container">
-	<div class="row">
-		<div class="col-sm-4" id="image">
-			<h2>Lorem Ipsum</h2>
+	<div class="row" *ngIf='produit'>
+		<div class="col-sm-4" id="image" >
+			<h2>{{produit.name}}</h2>
 			<img src={{produit.imageUrl}}>
 			<h3>{{produit.price.toFixed(2)}}$</h3>
 		</div>
 		<div class="col-sm-8" id="desc">
 			<h3>{{produit.descriptionDetail}}</h3>
-			<div class="row" id="test">
+			<div class="row" id="test" *ngIf='cartEnabled'>
 				<div class="col-sm-8">
 				</div>
 				<div class="col-sm-4">

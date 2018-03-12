@@ -6,7 +6,7 @@
 		<div class="col-sm-7">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<span routerLink='../produit-detail' (click)="produitService.onSelectProduit(produit)">
+					<span routerLink='../produit-detail' (click)="produitService.onSelectProduit(produit, cart)">
 						<h1>{{produit.name}}</h1>
 					</span>
 				</div>
@@ -20,18 +20,19 @@
 				<div class="panel-heading">
 					<p>{{produit.price.toFixed(2)}}$</p>
 				</div>
-				<div class="panel-body" id="ajouter" *ngIf="add; else retirerProduit">
-					<button class="btn btn-primary" type="button" (click)="userService.addProduct({produit: produit, quantite: 1})">
-					</button>
-				</div>
-
-				<ng-template #retirerProduit>
-					<div class="panel-body" id="retirer">
-						<button class="btn btn-primary" type="button" (click)="userService.removeProduct({produit: produit, quantite: 1})">
+				<div id="cartOption" class="panel-body" *ngIf="cart">
+					<div id="ajouter" *ngIf="add; else retirerProduit">
+						<button class="btn btn-primary" type="button" (click)="userService.addProduct({produit: produit, quantite: 1})">
 						</button>
 					</div>
-				</ng-template>
 
+					<ng-template #retirerProduit>
+						<div id="retirer">
+							<button class="btn btn-primary" type="button" (click)="userService.removeProduct({produit: produit, quantite: 1})">
+							</button>
+						</div>
+					</ng-template>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -1,6 +1,6 @@
 
-import {IQteProduit} from '../catalogue/Catalogue';
-import {Produit} from '../produit/Produit';
+import {IQteProduit} from './Catalogue';
+import {Produit} from './Produit';
 
 export class Panier{
  public produits: IQteProduit[];

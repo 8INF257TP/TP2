@@ -1,4 +1,4 @@
-import { Produit } from '../produit/Produit';
+import { Produit } from './Produit';
 
 export class DonneeProduits {
   

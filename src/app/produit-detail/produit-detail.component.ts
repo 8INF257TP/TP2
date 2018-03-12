@@ -1,7 +1,7 @@
 import { ProduitService } from '../produit.service';
 import { UserService } from '../user.service';
 import { Component, OnInit, Input } from '@angular/core';
-import { Produit } from '../produit/Produit';
+import { Produit } from '../Produit';
 
 @Component({
   selector: 'app-produit-detail',
@@ -10,10 +10,12 @@ import { Produit } from '../produit/Produit';
 })
 export class ProduitDetailComponent implements OnInit {
   produit: Produit;
-  
+  cartEnabled: boolean;
+
   constructor(private userService: UserService,  private produitService: ProduitService) { }
 
   ngOnInit() {
     this.produit = this.produitService.produitSelectionne;
+    this.cartEnabled = this.produitService.cart;
   }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
-import { Catalogue } from '../catalogue/Catalogue'
+import { Catalogue } from '../Catalogue'
 
 @Component({
   selector: 'app-catalogue',
