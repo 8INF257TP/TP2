@@ -16,6 +16,7 @@ import { ProduitService } from './produit.service';
 import { UserService } from './user.service';
 import { ProduitDetailComponent } from './produit-detail/produit-detail.component';
 import { AdminComponent } from './admin/admin.component';
+import { PaiementComponent } from './paiement/paiement.component';
 
 const appRoutes: Routes = [
   {
@@ -29,7 +30,8 @@ const appRoutes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'panier', component: PanierComponent},
   { path: 'produit-detail', component: ProduitDetailComponent},
-  { path: 'admin', component: AdminComponent }
+  { path: 'admin', component: AdminComponent },
+  { path: 'paiement', component: PaiementComponent}
 ];
 
 @NgModule({
@@ -43,7 +45,8 @@ const appRoutes: Routes = [
     SignInComponent,
     HomeComponent,
     ProduitDetailComponent,
-    AdminComponent
+    AdminComponent,
+    PaiementComponent
   ],
   imports: [
     BrowserModule,

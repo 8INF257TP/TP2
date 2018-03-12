@@ -1,4 +1,5 @@
 import { Component, OnInit, OnChanges, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { Panier } from '../Panier';
 import { Produit} from '../Produit';
 import { UserService } from '../user.service';
@@ -14,7 +15,7 @@ export class PanierComponent implements OnInit {
 public panier: Panier = new Panier();
 produit: Produit;
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private router: Router) { }
 
 
   ngOnInit() {
@@ -25,5 +26,6 @@ produit: Produit;
   payerPanier(){
     this.userService.clearTotal();
     this.userService.clearProduits();
+    this.router.navigateByUrl('paiement');
   }
 }

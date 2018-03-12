@@ -17,7 +17,7 @@ export class ProduitService {
     this.produitSelectionne = produit;
     this.cart = cartEnabled;
   }
-  
+
   getProduct(){
     return this.produits;
   }
