@@ -7,7 +7,6 @@
 	<ul class="list-group">
 		<li class="list-group-item" id="product-catalogue" *ngFor="let produit of panier.produits">
         <app-produit [produit]="produit.produit">{{produit}}</app-produit>
-        {{produit.quantite}}
 	</ul>
 </main>
 

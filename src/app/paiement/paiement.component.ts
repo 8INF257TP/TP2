@@ -6,12 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./paiement.component.css']
 })
 export class PaiementComponent implements OnInit {
-  numFacture: string;
+  numFacture: number;
 
   constructor() { }
 
   ngOnInit() {
-    this.numFacture = Math.floor(Math.random()*9999999999 + 1000000000).toPrecision(10);
+    this.numFacture = Math.floor(Math.random()*9999999999 + 1000000000);
   }
 
 }
