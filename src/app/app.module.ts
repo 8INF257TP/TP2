@@ -17,6 +17,8 @@ import { UserService } from './user.service';
 import { ProduitDetailComponent } from './produit-detail/produit-detail.component';
 import { AdminComponent } from './admin/admin.component';
 import { PaiementComponent } from './paiement/paiement.component';
+import { ModifProduitComponent } from './modif-produit/modif-produit.component';
+import { AjoutProduitComponent } from './ajout-produit/ajout-produit.component';
 
 const appRoutes: Routes = [
   {
@@ -31,7 +33,9 @@ const appRoutes: Routes = [
   { path: 'panier', component: PanierComponent},
   { path: 'produit-detail', component: ProduitDetailComponent},
   { path: 'admin', component: AdminComponent },
-  { path: 'paiement', component: PaiementComponent}
+  { path: 'paiement', component: PaiementComponent},
+  { path: 'modif-produit', component: ModifProduitComponent},
+  { path: 'ajout-produit', component: AjoutProduitComponent}
 ];
 
 @NgModule({
@@ -46,7 +50,9 @@ const appRoutes: Routes = [
     HomeComponent,
     ProduitDetailComponent,
     AdminComponent,
-    PaiementComponent
+    PaiementComponent,
+    ModifProduitComponent,
+    AjoutProduitComponent
   ],
   imports: [
     BrowserModule,

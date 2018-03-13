@@ -1,8 +1,24 @@
 <main role="main">
 	<ul class="list-group">
-		<li class="list-group-item" id="product-catalogue" *ngFor="let Iproduit of catalogueDeProduitsAModifier.produits | paginate: {itemsPerPage: 10, currentPage: p}">
-			<app-produit [produit]="Iproduit.produit">{{Iproduit.produit}}</app-produit>
-		</li>
+		<h1 class="h3 mb-3 font-weight-normal">Modification Produit</h1>
+		
+		<div class = "row">
+				<button class="btn btn-lg btn-primary btn-block col-md-2 offset-md-5" type="button" (click)="ajoutProduitCallBack()">Ajouter un produit</button>
+		</div>
+
+		<ng-container *ngFor="let Iproduit of catalogueDeProduitsAModifier.produits | paginate: {itemsPerPage: 10, currentPage: p}">
+			<ng-container  *ngIf = "Iproduit.quantite">
+			<div id="produit_a_afficher" class= "row">
+				<div class = "col-md-8">
+					<app-produit [produit]="Iproduit.produit" id="desc_prod" >{{Iproduit.produit}}</app-produit>
+				</div>
+				<div id="action_produit" class="col-md-4">	
+					<button class="btn btn-lg btn-primary btn-block col-md-4" type="button" (click)="removeProductCallBack(Iproduit)">Enlever</button>
+					<button class="btn btn-lg btn-primary btn-block col-md-4" type="button" (click)="modifProductCallBack()">Modifier</button>		
+				</div>
+			</div>	
+		</ng-container>
+		</ng-container>
 	</ul>
 	
 	<pagination-controls (pageChange)="p = $event"></pagination-controls>

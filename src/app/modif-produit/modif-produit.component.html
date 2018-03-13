@@ -1,0 +1,27 @@
+<form class="form-signin">
+
+    <h1 class="h3 mb-3 font-weight-normal">Modifier un Produit</h1>
+
+    <div class="form-group">
+        <label for="exampleFormControlFile1"></label>
+        <input type="File" class="form-control-file" style="display:none;" id="exampleFormControlFile1" data-buttonText="Choose an Image">
+        <input type="button" id="loadImage" value="Choisir une image" onclick="document.getElementById('exampleFormControlFile1').click();" />
+        <small id="fileHelp" class="form-text text-muted">Selectionner une image pour le produit</small>
+      </div>
+
+    <label for="inputNomProduit" class="sr-only" >Nouveau nom du produit</label>
+      <input type="text" id="inputLastName" class="form-control" name = "lastname" placeholder="Nom du produit" required>
+                
+    <label for="inputPrix" class="sr-only">Prix</label>
+      <input type="text" id="inputFirstName" class="form-control"  name = "firstname" placeholder="Prix" required>
+              
+      <label for="inputDescription" class="sr-only">Description</label>
+      <input type="text" id="inputUsername" class="form-control"  name = "username" placeholder="Description" required>
+
+      <div class="form-group">
+          <label for="exampleFormControlTextarea1" class="sr-only">Description Detaillee</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1"  placeholder="Description Detaillee" rows="4"></textarea>
+      </div>
+      
+<button class="btn btn-lg btn-primary btn-block" type="button" (click)="validerModifs()">Modifier le produit</button>
+  </form>

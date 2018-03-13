@@ -32,4 +32,17 @@ export class Catalogue{
     }
     this.produits.push(element);
   }
+
+  enleverProduit(element: IQteProduit): void {
+    let index: number = 0;
+
+      for(let produit of this.produits){
+        if(element.produit.id == produit.produit.id){
+          this.produits[index].quantite = 0;
+          return;
+        }
+        index++;
+      }
+  }
+
 };
